@@ -1,68 +1,129 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* Общие стили */
 body {
-  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+/* Контейнер приложения */
+.container {
+  width: 500px;
+  background: white;
+  padding: 20px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Кнопка выхода */
+.logout-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.logout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Входные поля */
+input, textarea {
+  width: 90%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Контейнер списка */
+.list-container {
+  background: #ffffff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Кнопки */
+button {
+  background-color: #ae92c5;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: rgb(151, 66, 179);
+}
+
+/* Группировка кнопок */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+/* Красная кнопка удаления */
+button.delete {
+  background-color: #c98087;
+}
+
+button.delete:hover {
+  background-color: #b02a37;
+}
+
+/* Зеленая кнопка */
+button.green {
+  background-color: #28a745;
+}
+
+button.green:hover {
+  background-color: #218838;
+}
+
+/* Форма создания задач */
+.add-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Логика списка */
+.list-header {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  display: block;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+ul {
+  list-style-type: none; /* Убирает точки */
+  padding: 0;
 }
